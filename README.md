@@ -1,15 +1,30 @@
 # Apclusterv: Clustering viral genomes with Affinity Propagation
 This software works in Python3.<br>
 Dependencies:<br>
+   Python>=3.7<br>
    Pandas<br>
    Numpy<br>
    Networkx<br>
    Scipy<br>
-   vConTACT2 (bioconda channel)<br>
-   cluster_one (http://www.paccanarolab.org/cluster-one/)<br>
+
+   Diamond <br>
+
+   R<br>
+
+Installation:
+   conda install diamond -c bioconda <br>
+   conda install r-base (if R is not already installed,we just need to run Rscript with stats package)<br>
+   pip install apclusterv <br>
    
 Usage:<br>
-   apcluster.sh input_gene_fasta gene_to_contig_map out_dir<br>
-   input_gene_fasta is the protein sequence file output from Prodigal gene prediciton for viral contigs. An example gene_contig_map can be found in data/<br>
-Parameter configuration:<br>
-   configure parameters in config file.<br>
+
+   step1. preduct ORFs from the DNA file with the following command:  <br>
+   prepare contig_dna_fasta <br>
+   (contig_dna_fasta is the path to the dna sequences for clustering)
+   
+   step2. execute clustering with the following command:
+   apclusterv contig_dna_fasta <br
+
+Results <br>
+   The program will create tmp/ directory. The clustering result is tmp/result.csv
+
