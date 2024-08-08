@@ -59,7 +59,7 @@ def main():
 	parser.add_argument("-alnnum",type=int,default=25,help="max target sequence number for protein-protein alignment, 25 by default")
 	parser.add_argument("-i",type=float,default=3,help="inflation value for mcl,3 by default" )
 	parser.add_argument("-r",type=float,default=4,help="relative simialrity cut-off parameter in the cluster integration step. 4 by default")
-
+	parser.add_argument("-mode",type=str,default="meta",help="meta or complete")
 	
 	args = parser.parse_args()
 	if args.protein is not None:
@@ -91,6 +91,7 @@ def main():
 	setattr(clusterargs,'prot',"tmp/protein_cluster_v2.csv")
 	setattr(clusterargs,'inflation',args.i)
 	setattr(clusterargs,'apk',args.r)
+	setattr(clusterargs,'mode',args.mode)
 	maincluster(clusterargs)
 
 

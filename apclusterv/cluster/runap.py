@@ -35,7 +35,7 @@ def sumcluster(cluster):
 			rep2ctg[row['rep']].append(row['contig'])
 		else:
 			rep2ctg[row['rep']] = [row['contig']]
-	print(len(rep2ctg))
+	#print(len(rep2ctg))
 	return rep2ctg,ctg2rep
 
 def separate(rep2ctg,ctg2rep,c1abs):
@@ -191,7 +191,7 @@ def aptest(edges,ctg2id,id2ctg):
 
 	for node,coef in clcoef.items():
 		#print(node,coef,between[node])
-		print('k',var2value['k'])
+		#print('k',var2value['k'])
 		#preference[node] = coef - var2value['k']*between[node]
 		preference[node] = coef
 		pstep[node] = 0.01
@@ -200,11 +200,11 @@ def aptest(edges,ctg2id,id2ctg):
 	#pstep = (np.max(mtx) - np.min(mtx) )/100
 	#print(ctg2id)
 	#cluster_centers_indices, labels = affinity_propagation(mtx, max_iter=1000,preference=preference, random_state=39)
-	print(preference)
+	#print(preference)
 	cluster_centers_indices, labels = adj_ap.adj_affinity_propagation(mtx,damping=0.2,pstep=pstep, max_iter=2000,preference=preference, random_state=39)
 	centerstr  = ''
 
-	print(cluster_centers_indices)
+	#print(cluster_centers_indices)
 	for center in cluster_centers_indices:
 		centerstr+=str(id2ctg[center])+','
 		complements.append(id2ctg[center])

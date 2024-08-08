@@ -29,7 +29,7 @@ def maincluster(args):
 	setattr(gsimargs,'aggr','tmp/ctgscore.csv')
 	setattr(gsimargs,'prot',args.prot)
 	setattr(gsimargs,'out','tmp/shared_protein.csv')
-	
+	setattr(gsimargs,'mode',args.mode)
 	calglobal(gsimargs)
 	
 	print("run mcl clustering")

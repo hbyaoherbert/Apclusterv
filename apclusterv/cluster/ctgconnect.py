@@ -74,8 +74,8 @@ def connect(args):
 	scoredf = pd.DataFrame(outscore,columns=['ctg1','ctg2','ratioscore'])
 	scoredf.to_csv(args.pcscore+'.aln',index=False,sep=',')
 	results = bfs(graph,ctgset)
-	print(len(graph))
-	print(len(results))
+	#print(len(graph))
+	#print(len(results))
 	outdata = []
 	idx = 0
 	for components in results:

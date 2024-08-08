@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 
 MAJOR =1
 MINOR =2
-PATCH =2
+PATCH =5
 VERSION = f"{MAJOR}.{MINOR}.{PATCH}"
 
 def get_install_requires():
@@ -25,7 +25,7 @@ setup(
     long_description_content_type="text/markdown",
 	url = 'https://github.com/hbyaoherbert/Apclusterv.git',
 	long_description = open('README.md',encoding="utf-8").read(),
-    python_requires=">=3.7",
+    python_requires=">=3.8",
     install_requires=get_install_requires(),
 	packages = find_packages(),
     entry_points={
@@ -37,7 +37,7 @@ setup(
        'Natural Language :: English',
        'Operating System :: Unix',
        'Programming Language :: Python',       
-       'Programming Language :: Python :: 3.7',
+       'Programming Language :: Python :: 3.8',
        'Topic :: Software Development :: Libraries :: Python Modules',
     ],
     package_data={'': ['scripts/*.R', '*.txt','.toml']}, #这个很重要
