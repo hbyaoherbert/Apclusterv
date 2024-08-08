@@ -58,8 +58,8 @@ def main():
 	parser.add_argument("contig",help="contig fasta file")
 	args = parser.parse_args()
 	print("Predict genes (protein sequences) from contig dna sequence")
-	#subprocess.run(["prodigal", "-i", args.contig, "-p", "meta" ,"-a", args.contig+".faa", "-o", "genelog"])
-	#parsefaa(args.contig+".faa")
+	subprocess.run(["prodigal", "-i", args.contig, "-p", "meta" ,"-a", args.contig+".faa", "-o", "genelog"])
+	parsefaa(args.contig+".faa")
 	
 def fromcsvlist(csvlist):
 	parsecsv(csvlist)	
