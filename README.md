@@ -1,4 +1,4 @@
-# Apclusterv: Clustering viral genomes with Affinity Propagation
+# Apclusterv: Refinement of Viral Genome Clustering with Affinity Propagation
 Apclusterv is a novel clustering software for viral genomes. The input genomes can be either complete genomes or contigs from metagenomic assembly. The program is based on protein-protein alignment and written in python<br>
 ## Dependencies:<br>
    python>=3.7<br>
