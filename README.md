@@ -1,5 +1,6 @@
-# Apclusterv: Refinement of Viral Genome Clustering with Affinity Propagation
+# Apclusterv: Clustering viral genomes with Affinity Propagation
 Apclusterv is a novel clustering software for viral genomes. The input genomes can be either complete genomes or contigs from metagenomic assembly. The program is based on protein-protein alignment and written in python<br>
+The current version is 1.1.2
 ## Dependencies:<br>
    python>=3.7<br>
    pandas<br>
@@ -13,14 +14,14 @@ Apclusterv is a novel clustering software for viral genomes. The input genomes c
    R>=3.6.1<br>
    
 ## Installation: <br>
-   We have publish apclusterv to PYPI. Suppose you are in a conda environment, you need to install MCL, prodigal (for ORF prediction),diamond (for alignment) and R(if not already installed, we just need stats library in r-base)
+   Suppose you are in a conda environment, you need to install MCL, prodigal (for ORF prediction),diamond (for alignment) and R(if not already installed, we just need stats library in r-base)
    ```bash
    conda install diamond -c bioconda 
    conda install mcl -c bioconda
    conda install prodigal -c bioconda
    conda install r-base 
    
-   pip install apclusterv 
+   pip install apclusterv==1.1.2
    ```
 ## Getting Started:<br>
 ### option 1. start with contigs 
@@ -44,4 +45,6 @@ Apclusterv is a novel clustering software for viral genomes. The input genomes c
 ## Results <br>
    The program will create tmp/ directory. The clustering result is tmp/cluster_result.i.r.csv
    (cluster_result.3.4.csv by default)
+   Simulation profile used in the manuscript is in data/profile.csv
+   RI and ARI for evalation script is data/eval.py
 
