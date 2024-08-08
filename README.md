@@ -13,7 +13,7 @@ Apclusterv is a novel clustering software for viral genomes. The input genomes c
    R>=3.6.1<br>
    
 ## Installation: <br>
-   Suppose you are in a conda environment, you need to install MCL, prodigal (for ORF prediction),diamond (for alignment) and R(if not already installed, we just need stats library in r-base)
+   We have publish apclusterv to PYPI. Suppose you are in a conda environment, you need to install MCL, prodigal (for ORF prediction),diamond (for alignment) and R(if not already installed, we just need stats library in r-base)
    ```bash
    conda install diamond -c bioconda 
    conda install mcl -c bioconda
