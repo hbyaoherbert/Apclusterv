@@ -4,8 +4,8 @@ The current stable version is 1.2.5
 ## Dependencies:<br>
 ### Operating System:  Unix Platforms
    python>=3.8<br>
-   pandas<br>
-   numpy<br>
+   pandas>=0.18.0<br>
+   numpy>=1.9.2<br>
    networkx >= 2.8.4 <br>
    scipy >=1.8.1<br>
    scikit-learn >= 1.1.2<br>
@@ -47,5 +47,14 @@ The current stable version is 1.2.5
    The program will create tmp/ directory. The clustering result is tmp/cluster_result.i.r.csv
    (cluster_result.3.4.csv by default)
    Simulation profile used in the manuscript is in data/profile.csv
-   RI and ARI for evalation script is data/eval.py
+   RI and ARI for evalation script is data/eval.py,data/fulltax.tab contains true genus labels.
 
+## Experiments in the manuscript
+   reproduce the experiment 1 (metagenomic contigs + RefSeq viral genomes) in the manuscript
+   ```bash
+   apclusterv -protein experiment1.faa -csv experiment1.csv -mode meta
+   ```
+   reproduce the experiment 1 (RefSeq viral genomes) in the manuscript
+   ```bash
+   apclusterv -protein experiment2.faa -csv experiment2.csv -mode complete
+   ```
