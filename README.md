@@ -54,7 +54,7 @@ The current stable version is 1.2.5
    ```bash
    apclusterv -protein experiment1.faa -csv experiment1.csv -mode meta
    ```
-   reproduce the experiment 1 (RefSeq viral genomes) in the manuscript
+   reproduce the experiment 2 (RefSeq viral genomes) in the manuscript
    ```bash
    apclusterv -protein experiment2.faa -csv experiment2.csv -mode complete
    ```
