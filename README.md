@@ -2,6 +2,7 @@
 Apclusterv is a novel clustering software for viral genomes. The input genomes can be either complete genomes or contigs from metagenomic assembly. The program is based on protein-protein alignment and written in python<br>
 The current stable version is 1.2.5
 ## Dependencies:<br>
+### Operating System:  Unix Platforms
    python>=3.8<br>
    pandas<br>
    numpy<br>
