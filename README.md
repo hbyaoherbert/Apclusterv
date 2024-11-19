@@ -21,7 +21,7 @@ The current stable version is 1.2.5
    conda install mcl -c bioconda
    conda install prodigal -c bioconda
    conda install r-base 
-   
+   conda install -c bioconda biopython
    pip install apclusterv==1.2.5
    ```
 ## Getting Started:<br>
