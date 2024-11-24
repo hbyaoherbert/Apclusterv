@@ -29,10 +29,13 @@ def connect(args):
 	alndf = pd.read_csv(args.alnscore,sep='\t',header=0)
 	edge2aln = {}
 	for ctg1,ctg2,score in zip(alndf['ctg1'],alndf['ctg2'],alndf['ratioscore']):
+		if score <0.7:
+			continue
 		ctga = min(ctg1,ctg2)
 		ctgb = max(ctg1,ctg2)
 		edge2aln[(ctga,ctgb)] = score 
 	
+
 
 	mapdf = pd.read_csv(args.map,sep=',',header=0)
 	prot2id = dict(zip(mapdf['protein_id'],mapdf.index))
@@ -48,7 +51,7 @@ def connect(args):
 	for idx,row in df.iterrows():
 		ctg1 = row[0]
 		ctg2 = row[1]
-	
+
 		if ctg1==ctg2:
 			continue
 		ctg1 = ctg2id[ctg1]

@@ -20,7 +20,7 @@ def maincluster(args):
 	
 	
 	print("calculate contig-contig alignment and ratio score")
-	aggrctgscore(args)
+	#aggrctgscore(args)
 	
 	print("generate input for mcl clustering")
 	
@@ -30,14 +30,14 @@ def maincluster(args):
 	setattr(gsimargs,'prot',args.prot)
 	setattr(gsimargs,'out','tmp/shared_protein.csv')
 	setattr(gsimargs,'mode',args.mode)
-	calglobal(gsimargs)
+	#calglobal(gsimargs)
 	
 	print("run mcl clustering")
 	mclargs = Arg()
 	inflation = args.inflation
 	setattr(mclargs, 'edges', 'tmp/shared_protein.csv')
 	setattr(mclargs,'inflation',inflation)
-	run_mcl(mclargs)
+	#run_mcl(mclargs)
 	
 	
 	print("generate input for affinity propagation")
@@ -50,11 +50,6 @@ def maincluster(args):
 	setattr(apargs,'pcscore','tmp/shared_protein.csv')
 
 
-	#parser.add_argument("resfile",type=str)
-	#parser.add_argument("aggr",type=str)
-	#parser.add_argument("map",type=str)
-	#filter_edge(apargs)
-	#construct_graph(apargs.aggr+".abs",apargs.aggr+".rep")
 	
 	
 	connect(apargs)

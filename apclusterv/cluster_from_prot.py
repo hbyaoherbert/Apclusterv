@@ -76,15 +76,17 @@ def main():
 	
 	
 	print("Running diamond alignment")
+
+	'''
 	db_fp = make_diamond_db(protfile, 'tmp', args.t)
 	run_diamond(protfile, db_fp, args.t, args.evalue, args.alnnum, 'tmp/protein.diamond.tab')
-	
+	'''
 	print("Creating protein family")
-	
+	'''
 	mclres = make_protein_clusters_mcl('tmp/protein.diamond.tab', 'tmp')
 
 	parsemcl(mclres,"tmp/prot_contig_id.csv")
-
+    '''
 	clusterargs = Arg()
 	setattr(clusterargs,'map',"tmp/prot_contig_id.csv")
 	setattr(clusterargs,'tab','tmp/protein.diamond.tab')
