@@ -63,6 +63,8 @@ def connect(args):
 		if key in edge2aln.keys():
 			alnscore = edge2aln[key]
 			outscore.append([ctga,ctgb,alnscore])
+		else:
+			continue
 
 
 		ctgset.add(ctg1)
